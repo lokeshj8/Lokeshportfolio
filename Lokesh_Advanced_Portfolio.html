@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokesh's Advanced Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .menu {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+        .section {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section-title {
+            cursor: pointer;
+            font-size: 20px;
+            margin: 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        .section-content {
+            display: none;
+            padding: 10px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Lokesh</h1>
+        <div class="menu" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2 class="section-title" onclick="toggleSection('summary')">Professional Summary</h2>
+            <div class="section-content" id="summary">
+                <p>Detail-oriented Mechanical Engineer with foundational skills in software development, including Java, AWS, and SQL. Seeking opportunities to bring technical and analytical strengths to a dynamic team environment.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title" onclick="toggleSection('education')">Education</h2>
+            <div class="section-content" id="education">
+                <p>Bachelor of Technology, Mechanical - Sree Vidyaniketan Engineering College</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title" onclick="toggleSection('skills')">Skills</h2>
+            <div class="section-content" id="skills">
+                <p>Java, AWS, SQL, HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title" onclick="toggleSection('projects')">Projects</h2>
+            <div class="section-content" id="projects">
+                <p>- Eye Care Management System (Java)</p>
+                <p>- Basic Calculator App</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title" onclick="toggleSection('achievements')">Achievements</h2>
+            <div class="section-content" id="achievements">
+                <p>- Awarded SkillBadge on Naukri Code 360</p>
+                <p>- Successfully tutored 9th-grade CBSE student in Math and Science</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Contact:</h2>
+            <p>Phone: 7013428191</p>
+            <p>Email: jlokesh2002@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        }
+        function toggleMenu() {
+            alert('Menu clicked! This could link to additional sections or functionalities.');
+        }
+    </script>
+</body>
+</html>
